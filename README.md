@@ -16,7 +16,7 @@ aws emr create-cluster \
   --service-role EMR_DefaultRole \
   --ec2-attributes KeyName=${KEY_NAME},InstanceProfile=${SPARK_PROFILE} \
   --release-label emr-4.3.0 \
-  --applications Name=Spark Name=Hive \
+  --applications Name=Spark Name=Hive Name=Zeppelin-sandbox \
   --bootstrap-actions Path=s3://${SPARK_BUCKET}/bootstrap/telemetry.sh \
   --configurations https://s3-us-west-2.amazonaws.com/${SPARK_BUCKET}/configuration/configuration.json 
 ```
@@ -34,7 +34,7 @@ aws emr create-cluster \
   --service-role EMR_DefaultRole \
   --ec2-attributes KeyName=${KEY_NAME},InstanceProfile=${SPARK_PROFILE} \
   --release-label emr-4.3.0 \
-  --applications Name=Spark Name=Hive \
+  --applications Name=Spark Name=Hive Name=Zeppelin-sandbox \
   --bootstrap-actions Path=s3://${SPARK_BUCKET}/bootstrap/telemetry.sh \
   --configurations https://s3-us-west-2.amazonaws.com/${SPARK_BUCKET}/configuration/configuration.json 
   --auto-terminate \
