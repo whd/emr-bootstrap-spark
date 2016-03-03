@@ -43,5 +43,6 @@ aws emr create-cluster \
 
 ## Deploy to AWS via ansible
 ```bash
-ansible-playbook ansible/deploy.yml -e '@ansible/envs/dev.yml' -i ansible/inventory
+cd ansible
+ansible-playbook deploy.yml -e '@envs/dev.yml' -i inventory
 ```
