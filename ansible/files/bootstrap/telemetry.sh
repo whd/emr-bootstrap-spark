@@ -137,6 +137,8 @@ sudo yum makecache
 
 # Install packages
 sudo yum -y install git jq htop tmux libffi-devel aws-cli postgresql-devel zsh snappy-devel readline-devel emacs nethogs w3m
+sudo yum -y install --security
+sudo /usr/sbin/update-motd
 
 # Install sbt
 sbt_version=0.13.15
